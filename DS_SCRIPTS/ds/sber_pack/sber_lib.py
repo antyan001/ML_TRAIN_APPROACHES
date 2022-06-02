@@ -20,13 +20,13 @@ import urllib
    
 def get_con_creds(iskra):
     if iskra == 'iskra1_primary':
-        return 'tech_iskra[iskra]','Uthvfy123','iskra1_primary'    
+        return '','','iskra1_primary'    
     if iskra == 'iskra2':
-        return 'tech_iskra[iskra]','Uthvfy123','iskra2'    
+        return '','','iskra2'    
     if iskra == 'not13_igrand':
-        return 'tech_iskra[iskra]','Uthvfy123','not13_igrand'        
+        return '','','not13_igrand'        
     if iskra == 'iskra4':
-        return 'tech_iskra[iskra]','Uthvfy123','iskra4'
+        return '','','iskra4'
 
 def get_iskra_con_str(iskra='iskra4'):
     return '{}/{}@{}'.format(*get_con_creds(iskra))

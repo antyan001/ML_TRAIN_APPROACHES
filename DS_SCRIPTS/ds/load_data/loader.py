@@ -15,9 +15,9 @@ class OracleDB(object):
         self.sid = sid
         self.DatabaseError = cx_Oracle.DatabaseError
         self.tns_names = {
-            'iskra4': cx_Oracle.makedsn('10.112.79.164',  1521, 'iskra4'),
-            'iskra3': cx_Oracle.makedsn('10.112.102.106', 1521, 'iskra3'),
-            'iskra2': cx_Oracle.makedsn('10.112.242.254', 1521, 'iskra2'),
+            'iskra4': cx_Oracle.makedsn('',  1521, 'iskra4'),
+            'iskra3': cx_Oracle.makedsn('', 1521, 'iskra3'),
+            'iskra2': cx_Oracle.makedsn('', 1521, 'iskra2'),
             'iskra1_primary': """(DESCRIPTION =
                (LOAD_BALANCE=off)
                  (FAILOVER = ON)
