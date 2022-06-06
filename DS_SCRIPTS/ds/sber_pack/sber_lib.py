@@ -19,16 +19,16 @@ import urllib
 
    
 def get_con_creds(iskra):
-    if iskra == 'iskra1_primary':
-        return '','','iskra1_primary'    
+    if iskra == '':
+        return 'login','pass',''    
     if iskra == 'iskra2':
-        return '','','iskra2'    
-    if iskra == 'not13_igrand':
-        return '','','not13_igrand'        
-    if iskra == 'iskra4':
-        return '','','iskra4'
+        return 'login','pass',''    
+    if iskra == '':
+        return 'login','pass',''        
+    if iskra == '':
+        return '','',''
 
-def get_iskra_con_str(iskra='iskra4'):
+def get_iskra_con_str(iskra=''):
     return '{}/{}@{}'.format(*get_con_creds(iskra))
     
 def sber_service_auth(service, domain, username, password):
