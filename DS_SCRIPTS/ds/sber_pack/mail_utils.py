@@ -266,19 +266,19 @@ class Authorization(object):
     def password(self):
         return self.get_password()
 
-ServAuth = Authorization(user='single_base_sales_kb',
-                         domain='SBCORP',
-                         mailbox='single_base_sales_kb@ub.sbrf.ru',
-                         server="9016-mailcas.sbcorp.ub.sbrf.ru")
+ServAuth = Authorization(user='',
+                         domain='',
+                         mailbox='',
+                         server="")
 
-DKKAuth  = Authorization(user='iskra.dkk',
-                         domain='ALPHA',
-                         mailbox='iskra.dkk@mail.ca.sbrf.ru',
+DKKAuth  = Authorization(user='i',
+                         domain='',
+                         mailbox='',
                          server="Outlook.ca.sbrf.ru")
 
-ISKRACVMAuth = Authorization(user='iskra_cvm',
-                         domain='ALPHA',
-                         mailbox='iskra_cvm@mail.ca.sbrf.ru',
+ISKRACVMAuth = Authorization(user='',
+                         domain='',
+                         mailbox='',
                          server='Outlook.ca.sbrf.ru')
 
 
@@ -299,7 +299,7 @@ class MailReceiver(object):
         self.pas = password or self.AuthClass.password
         self.savepath = savepath or join(workdir, "New")
         self.AuthClass = auth_class
-        # self.creds = Credentials(username="SBCORP\\Filin-GA", password=base64.decodestring(self.pas))
+        # self.creds = Credentials(username="", password=base64.decodestring(self.pas))
         self.creds = Credentials(username=self.AuthClass.username, password=ds(self.pas))
         #"cab-vop-mbx1035.omega.sbrf.ru"
         #"9016-mailcas.sbcorp.ub.sbrf.ru"
